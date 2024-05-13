@@ -1,0 +1,89 @@
+//Bapt-tech
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #0f0f0f;
+}
+
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid #ffffff;
+}
+
+.hour-hand, .minute-hand, .second-hand {
+  position: absolute;
+  width: 50%;
+  height: 4px; /* Augmenter l'épaisseur des aiguilles pour une meilleure visibilité */
+  background-color: #333;
+  transform-origin: 0 50%;
+}
+
+.hour-hand {
+  top: calc(50% - 4px); /* La moitié de l'épaisseur pour centrer correctement */
+  left: calc(50% - 2px); /* 25% de la largeur moins la moitié de l'épaisseur */
+  z-index: 3;
+}
+
+.minute-hand {
+  top: calc(50% - 2px); /* La moitié de l'épaisseur pour centrer correctement */
+  left: calc(50% - 2px); /* 20% de la largeur moins la moitié de l'épaisseur */
+  z-index: 2;
+}
+
+.second-hand {
+  top: calc(50% - 1px); /* La moitié de l'épaisseur pour centrer correctement */
+  left: calc(50% - 2px); /* 15% de la largeur moins la moitié de l'épaisseur */
+  background-color: red;
+  z-index: 10;
+}
+
+.center-circle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
+/* Styles pour les chiffres des heures */
+.hour-numbers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hour-number {
+  position: absolute;
+  font-size: 14px;
+  font-weight: bold;
+  transform-origin: 50% 100%;
+    color: white; /* Couleur des chiffres */
+  font-family: Arial; /* Typographie */
+}
+
+/* Positionnement des chiffres autour de l'horloge */
+.hour-number:nth-child(1) { transform: rotate(0deg) translateY(-120px); }
+.hour-number:nth-child(2) { transform: rotate(30deg) translateY(-120px); }
+.hour-number:nth-child(3) { transform: rotate(60deg) translateY(-120px); }
+.hour-number:nth-child(4) { transform: rotate(90deg) translateY(-120px); }
+.hour-number:nth-child(5) { transform: rotate(120deg) translateY(-120px); }
+.hour-number:nth-child(6) { transform: rotate(150deg) translateY(-120px); }
+.hour-number:nth-child(7) { transform: rotate(180deg) translateY(-120px); }
+.hour-number:nth-child(8) { transform: rotate(210deg) translateY(-120px); }
+.hour-number:nth-child(9) { transform: rotate(240deg) translateY(-120px); }
+.hour-number:nth-child(10) { transform: rotate(270deg) translateY(-120px); }
+.hour-number:nth-child(11) { transform: rotate(300deg) translateY(-120px); }
+.hour-number:nth-child(12) { transform: rotate(330deg) translateY(-120px); }
